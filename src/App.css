@@ -1,0 +1,8 @@
+body {
+    background: var(--body-color);
+}
+
+.kontainer {
+    width: 100%;
+    position: relative;
+}
