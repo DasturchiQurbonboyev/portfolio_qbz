@@ -59,7 +59,7 @@ const HomeComponent = () => {
                         <span>Zafarbek Qurbonboyev</span>
                     </div>
                     <div className="featured-name">
-                        <p>I'am <span className='typedText' ref={typedElement}>Frontend Developer</span></p>
+                        <p>I'am <span className='typedText' ref={typedElement}></span></p>
                     </div>
                     <div className="featured-text-info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam temporibus voluptatibus, mollitia quos unde commodi. Tenetur odio vero labore perferendis, hic id optio ullam saepe suscipit laudantium voluptas culpa corrupti.</p>
