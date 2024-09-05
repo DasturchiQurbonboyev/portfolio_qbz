@@ -1,5 +1,5 @@
 .wrapper {
-    padding-inline: 10vw;
+    padding-inline: 11vw;
 }
 
 .featured-box {
@@ -191,9 +191,6 @@
         font-size: 40px;
     }
 
-    .wrapper {
-        padding-inline: 5vw;
-    }
 
 
 }

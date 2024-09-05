@@ -180,10 +180,14 @@ h3 {
 
 @media (max-width:540px) {
     .projects-box {
-        width: 100%;
+        width: 80%;
     }
 
     .col {
-        width: 90%;
+        width: 80%;
+    }
+
+    .row {
+        margin: 0 auto;
     }
 }

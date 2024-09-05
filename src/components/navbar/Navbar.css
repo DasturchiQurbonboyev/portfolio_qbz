@@ -126,7 +126,6 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* background: red; */
         background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(20px);
         width: 100%;
