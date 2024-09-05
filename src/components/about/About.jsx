@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import './About.css'
 import { FiDownload } from 'react-icons/fi'
 import ScrollReveal from "scrollreveal";
+import resume from '../../public/Qurbonboyev_Zafarbek_cv.pdf'
+
 
 const About = () => {
 
@@ -47,9 +49,11 @@ const About = () => {
                                 Wordpress.
                             </p>
                             <div className="about-btn">
-                                <button className="btn">
-                                    Download CV <FiDownload />
-                                </button>
+                                <a href={resume} download='Resume' >
+                                    <button className="btn">
+                                        Download CV <FiDownload />
+                                    </button>
+                                </a>
                             </div>
 
                         </div>

@@ -3,6 +3,8 @@ import HomeComponent from '../../components/home/HomeComponent'
 import About from '../../components/about/About'
 import Projects from '../../components/projects/Projects'
 import Contact from '../../components/contact/Contact'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
     return (
@@ -11,6 +13,7 @@ const Home = () => {
             <About />
             <Projects />
             <Contact />
+            <ToastContainer />
         </div>
     )
 }
