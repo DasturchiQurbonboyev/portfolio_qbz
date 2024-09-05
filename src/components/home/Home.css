@@ -184,11 +184,16 @@
         width: 150px;
         height: 150px;
     }
-
 }
 
 @media (max-width:540px) {
     .featured-name {
         font-size: 40px;
     }
+
+    .wrapper {
+        padding-inline: 5vw;
+    }
+
+
 }

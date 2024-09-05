@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import './Navbar.css'
-import resume from '../../public/Qurbonboyev_Zafarbek_cv.pdf'
-
+import React, { useEffect, useState } from 'react';
+import './Navbar.css';
+import resume from '../../public/Qurbonboyev_Zafarbek_cv.pdf';
 
 const Navbar = () => {
     const [responsive, setResponsive] = useState(false);
     const [scrollY, setScrollY] = useState(0);
 
+    // Scroll listener
     const handleScroll = () => {
         setScrollY(window.scrollY);
     };
@@ -18,7 +18,37 @@ const Navbar = () => {
         };
     }, []);
 
+    // Active link on scroll
+    useEffect(() => {
+        const scrollActive = () => {
+            const scrollY = window.scrollY;
+            const sections = document.querySelectorAll('section[id]'); // id li sectionlarni olamiz
 
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 50;
+                const sectionId = current.getAttribute('id');
+
+                console.log(`Section: ${sectionId}, scrollY: ${scrollY}, sectionTop: ${sectionTop}, sectionHeight: ${sectionHeight}`);
+
+                const navLink = document.querySelector(`.nav-menu a[href="#${sectionId}"]`); // id bilan hrefni solishtiramiz
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLink?.classList.add('active-link');
+                    console.log(`Active link qo'shildi: ${sectionId}`);
+                } else {
+                    navLink?.classList.remove('active-link');
+                    console.log(`Active link o'chirildi: ${sectionId}`);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', scrollActive);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', scrollActive);
+        };
+    }, []);
 
     return (
         <nav id="header" className={`${scrollY > 50 ? "shadow" : "noShadow"}`}>
@@ -43,7 +73,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="nav-button">
-                <a href={resume} download='Resume' className="btn">
+                <a href={resume} download="Resume" className="btn">
                     Download CV
                 </a>
             </div>
@@ -56,4 +86,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar; // Bu qator endi to'g'ri joyda
+export default Navbar;

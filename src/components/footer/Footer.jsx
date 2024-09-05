@@ -35,7 +35,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="bootom-footer">
-                <p>Copyright &copy; <a href="#home">Zafarbek Qurbonboyev</a> All rights reseved </p>
+                <p className='max-[540px]:max-w-[250px]'>Copyright &copy;  <a href="#home"> Zafarbek Qurbonboyev</a> All rights reseved </p>
             </div>
         </div>
     )

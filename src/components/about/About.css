@@ -159,8 +159,10 @@ h3 {
 
     .col {
         display: flex;
+        align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .about-info {
@@ -179,5 +181,9 @@ h3 {
 @media (max-width:540px) {
     .projects-box {
         width: 100%;
+    }
+
+    .col {
+        width: 90%;
     }
 }

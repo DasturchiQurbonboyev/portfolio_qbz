@@ -84,7 +84,7 @@ const Contact = () => {
                 <div className="col">
                     <div className="contact-info">
                         <h2>Find Me  <FaArrowDown className='contact-icons' /></h2>
-                        <p className='gmail'><FaRegEnvelope className='contact-icons' /> Email:dasturchiqurbonboyev@gmail.com</p>
+                        <p className='gmail'><FaRegEnvelope className='contact-icons' /> Email:qzb0420@gmail.com</p>
                         <p><FiPhone className='contact-icons' /> Tel: +998990955904</p>
                     </div>
                 </div>
